@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cube Timer</title>
+  </head>
+  <body>
+    <main id="stage">
+      <header>
+        <p id="scramble" aria-live="polite"></p>
+        <svg id="net" class="net" viewBox="0 0 12 9" role="img" aria-label="Cube after applying the scramble"></svg>
+        <button id="new-scramble" class="quiet" type="button">New scramble</button>
+      </header>
+
+      <section class="center">
+        <div id="timer" data-state="idle" role="timer">00:00.000</div>
+        <div id="wave" class="wave" aria-hidden="true"></div>
+        <div class="actions">
+          <button id="copy" class="secondary" type="button" hidden>Copy result</button>
+          <button id="send" class="primary" type="button" hidden>Send score</button>
+        </div>
+        <textarea id="fallback" class="fallback" readonly hidden aria-label="Result to copy"></textarea>
+      </section>
+
+      <footer>
+        <p id="hint"></p>
+        <p id="status"></p>
+      </footer>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
